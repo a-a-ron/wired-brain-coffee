@@ -12,12 +12,16 @@ jobs:
           name: Build the jekyll site
           command: bundle exec jekyll build
   test:
+    docker:
+      - image: circleci/ruby:2.4.1-node-browsers
     steps:
       - run:
           name: Test phase
           command: echo === Test phase completed ===
 
   complete:
+    docker:
+      - image: circleci/ruby:2.4.1-node-browsers
     steps:
       - run:
           name: Completed

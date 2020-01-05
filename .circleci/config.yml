@@ -5,16 +5,27 @@ jobs:
       - image: circleci/ruby:2.4.1-node-browsers
     steps:
       - checkout
-      - run: echo === Build phase ===
+      - run:
+          name: Build dependencies
+          command: bundle install
+      - run:
+          name: Build the jekyll site
+          command: bundle exec jekyll build
   test:
-    docker:
-      - image: circleci/ruby:2.4.1-node-browsers
     steps:
-      - checkout
-      - run: echo === Test phase ===
+      - run:
+          name: Test phase
+          command: echo === Test phase completed ===
+
+  complete:
+    steps:
+      - run:
+          name: Completed
+          command: date
 workflows:
   version: 2
-  build_and_test:
+  build_and_test_and_complete:
     jobs:
       - build
       - test
+      - complete

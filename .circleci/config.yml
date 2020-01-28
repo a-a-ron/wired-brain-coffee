@@ -14,10 +14,20 @@ jobs:
       - image: circleci/ruby:2.6.3-stretch-node
     steps: 
       - checkout
+      - run:
+          name: build dependencies
+          command: bundle install
+      
       - run: 
-          name: Which bundler?
-          command: bundle -v
-      - ruby/bundle-install
+          name: build the jekyll site
+          command: bundle exec jekyll build
+      - run: 
+          name: Print the Current Time
+          command: date
+          
+          
+          
+          
 
 # What to do next? Set up a test job. Please see 
 # https://circleci.com/docs/2.0/configuration-reference/, for more  info on how to get started.

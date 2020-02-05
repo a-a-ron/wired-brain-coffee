@@ -14,10 +14,15 @@ jobs:
       - image: circleci/ruby:2.4.1-node-browsers
     steps: 
       - checkout
+      - run:
+          name: build dependencies
+          command: bundle install
+      
       - run: 
-          name: Greeting
-          command: echo Hello, world
-          
+          name: build the jekyll site
+          command: bundle exec jekyll build
+      
+
 
 # What to do next? Set up a test job. Please see 
 # https://circleci.com/docs/2.0/configuration-reference/, for more  info on how to get started.

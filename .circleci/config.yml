@@ -16,7 +16,7 @@ jobs:
       - checkout
       - run:
           name: build dependencies
-          commaand: bundle install
+          command: bundle install
       
       - run: 
           name: build the jekyll site

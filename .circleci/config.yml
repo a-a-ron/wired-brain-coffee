@@ -15,8 +15,11 @@ jobs:
     steps: 
       - checkout
       - run: 
-          name: Which bundler?
-          command: bundle -v
+          name: Build Dependencies
+          command: bundle install
+      - run: 
+          name: Build the Jekyll Site
+          command: bundle exec jekyll build
       - ruby/bundle-install
 
 # What to do next? Set up a test job. Please see 

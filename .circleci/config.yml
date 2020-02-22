@@ -11,4 +11,10 @@ jobs:
       - run:
           name: Which bundler?
           command: bundle -v
+      - run:
+          name: Greeting
+          command: echo Hello, World
+      - run:
+          name: Current time
+          command: date
       - ruby/bundle-install

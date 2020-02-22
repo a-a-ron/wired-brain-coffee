@@ -1,16 +1,15 @@
-version: 2
+version: 2.1
+orbs:
+  ruby: circleci/ruby@0.1.2 
+
 jobs:
-  build
+  build:
     docker:
-      - image: circleci/ruby:2.4.1-node-browsers
-      
-     steps:
+      - image: circleci/ruby:2.6.3-stretch-node
+    executor: default
+    steps:
       - checkout
-      
       - run:
-        name: Greeting
-        command: echo Hello, World.
-        
-      - run:
-        name: Print the Current Time
-        command:date
+          name: Which bundler?
+          command: bundle -v
+      - ruby/bundle-install

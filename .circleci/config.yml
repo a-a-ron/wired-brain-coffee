@@ -11,9 +11,15 @@ jobs:
       - run:
           name: Which bundler?
           command: bundle -v
+          
       - run:
-          name: Greeting
-          command: echo Hello, World
+          name: build dependencies
+          command: bundle install
+
+      - run:
+          name: build the jekyll site
+          command: bundle exec jekyll build
+
       - run:
           name: Current time
           command: date

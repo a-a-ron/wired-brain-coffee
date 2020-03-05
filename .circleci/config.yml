@@ -19,9 +19,9 @@ jobs:
 
       # specify any bash command here prefixed with `run: `
       - run: 
-        name: Greeting
-        command: echo Hello, World.
+          name: Greeting
+          command: echo Hello, World.
         
       - run: 
-        name: Print the current time
-        command: date
+          name: Print the current time
+          command: date

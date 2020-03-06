@@ -16,11 +16,15 @@ jobs:
     working_directory: ~/repo
     steps:
       - checkout
+      
+      - run:
+          name: build dependencies
+          command: bundle install
 
       # specify any bash command here prefixed with `run: `
       - run: 
-          name: Greeting
-          command: echo Hello, World.
+          name: build jekyll site
+          command: bundle exec jekyll build
         
       - run: 
           name: Print the current time

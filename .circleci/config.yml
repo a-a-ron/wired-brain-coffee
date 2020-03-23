@@ -3,10 +3,17 @@ version: 2.1
 jobs:
   build:
     docker:
-      - image: circleci/ruby:2.4.1-node-browsers
+      - image: circleci/ruby:2.4.4-node-browsers
     
     steps:
       - checkout
+      
       - run:
-          name: Greeting
-          command: echo Hello, world.
+          name: build dependency
+          command: bundle install
+        
+      - run:
+          name: build the jekyll site
+          command: bundle exec jekyll build
+
+      

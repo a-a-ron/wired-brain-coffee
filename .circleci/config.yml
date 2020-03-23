@@ -7,6 +7,13 @@ jobs:
     
     steps:
       - checkout
+      
       - run:
-          name: Greeting
-          command: echo Hello, world.
+        name: build dependency
+        command: bundle install
+        
+      - run:
+          name: build the jekyll site
+          command: bundle exec jekyll exec
+
+      

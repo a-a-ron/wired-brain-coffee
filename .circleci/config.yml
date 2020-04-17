@@ -11,8 +11,10 @@ jobs:
     steps:
       - checkout
       - run:
-          name: Henlo G
-          command: echo hellow world
+          name: build dependencies
+      - run:
+          name: build the jekyll site
+          command: bundle exec jekyll build
       - run:
           name: print the current time/date
           command: date

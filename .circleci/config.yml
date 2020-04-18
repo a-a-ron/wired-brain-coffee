@@ -9,6 +9,15 @@ jobs:
     executor: ruby/default
     steps:
       - checkout
+      
+      - run:
+          name: build dependencies
+          command: bundle install
+      
+      - run:
+          name: build the jekyll site
+          command: bundle exec jekyll build
+          
       - run:
           name: Which bundler?
           command: bundle -v

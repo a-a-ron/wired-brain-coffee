@@ -1,6 +1,7 @@
 build:
     docker:
-      - image: circleci/ruby:2.6.3-node-browsers    steps:
+      - image: circleci/ruby:2.6.3-node-browsers    
+      steps:
       - image: circleci/ruby:2.6.3-node-browsers    
       steps:
       - checkout

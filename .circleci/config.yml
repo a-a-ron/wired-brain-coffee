@@ -17,5 +17,5 @@ jobs:
           command: bundle exec jekyll build
        
       - run:
-          name: print current time:
+          name: print current time
           command: date

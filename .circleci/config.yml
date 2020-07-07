@@ -1,0 +1,17 @@
+version: 2
+jobs:
+  build:
+    docker:
+      - image: ciccleci:ruby:2.4.1-node-browsers
+
+steps:
+  - checkout
+  
+  - run
+      name: Greeting
+      command : Hello World
+      
+  - run
+      name: Print the current time
+      command : date
+      

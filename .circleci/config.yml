@@ -5,8 +5,7 @@ jobs:
       - image: circleci/ruby:2.4-node-browsers
       
     steps:
-      - checkout
-      
+    
       - run:
         name: Greeting
         command: echo Hello, world. 

@@ -6,7 +6,6 @@ jobs:
       
     steps:
     - checkout
-      
     - run:
       name: Greeting
       command: echo Hello, world. 

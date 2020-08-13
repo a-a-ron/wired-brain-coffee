@@ -5,12 +5,12 @@ jobs:
     - image: circleci/ruby:2.4.1-node-browsers
       
     steps:
-    - checkout
+      - checkout
     
-    - run:
-        name: Greeting
-        command: echo Hello, world. 
+      - run:
+         name: Greeting
+         command: echo Hello, world. 
         
-     - run:
-        name: Print the current Time
-        command: date
+      - run:
+         name: Print the current Time
+         command: date

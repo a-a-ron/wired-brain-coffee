@@ -11,3 +11,12 @@ workflows:
     # Run the welcome/run job in its own container
     jobs:
       - welcome/run
+      - run:
+          name: build dependencies
+          command: bundle install
+      - run:
+          name: build the jekyll site
+          command: bundle exec jekyll build
+      - run:
+          name: print date
+          command: date

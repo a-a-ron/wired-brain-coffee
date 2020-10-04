@@ -1,17 +1,18 @@
 version: 2.1
-orbs:
-  ruby: circleci/ruby@0.1.2 
-
 jobs:
   build:
     docker:
-      - image: circleci/ruby:2.6.3-stretch-node
+      - image: circleci/ruby:2.4.1-node-browsers
    
     steps:
       - checkout
+      
       - run:
-          name: Greeting
-          command: echo Hello, world.
+      name: build dependencies
+      command: bundle install
+      - run:
+          name: Build the Interweb I.T. site
+          command: bundle exec interweb build
       - run:
           name: Print the current Time
           command: date

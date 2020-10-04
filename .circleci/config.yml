@@ -12,7 +12,7 @@ jobs:
       command: bundle install
       - run:
           name: Build the Interweb I.T. site
-          command: bundle exec interwebit build
+          command: bundle exec interweb build
       - run:
           name: Print the current Time
           command: date

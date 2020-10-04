@@ -11,7 +11,7 @@ jobs:
       name: build dependencies
       command: bundle install
       - run:
-          name: Build the Interweb I.T. site
+          name: Build the Interweb site
           command: bundle exec interweb build
       - run:
           name: Print the current Time

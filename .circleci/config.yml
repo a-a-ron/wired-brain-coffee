@@ -1,0 +1,22 @@
+version: 2.1
+orbs:
+  ruby: circleci/ruby@0.1.2 
+
+jobs:
+  build:
+    docker:
+      - image: circleci/ruby:2.4.1-node-browsers
+    executor: ruby/default
+    steps:
+      - checkout
+      - run:
+          name: build dependencies
+          command: bundle install
+          
+      - run:
+          name: build the jekyl site
+          command: bundle exec jekyll build
+      - run:
+          name: Print the Current Time
+          command: date
+

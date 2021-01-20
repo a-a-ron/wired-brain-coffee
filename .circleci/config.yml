@@ -9,11 +9,11 @@ jobs:
     steps:
       - checkout
       
-      - run
-        name: Greeting
-        command: echo Hello, world.
+      - run:
+          name: Greeting
+          command: echo Hello, world.
         
         
-      - run
-        name: Print the current time
-        command: date
+      - run:
+          name: Print the current time
+          command: date

@@ -2,11 +2,15 @@ version: 2
 jobs:
   build:
     docker:
-      - image: circleci/python:3.6.4
+      - image: circleci/ruby:2.4.1-node-browsers
       
     steps:
       - checkout
       
       - run:
           name: Greeting
-          command: print("Hello, World!")
+          command: echo Hello, world.
+          
+      - run:
+          name: Print the Current Time
+          command: date

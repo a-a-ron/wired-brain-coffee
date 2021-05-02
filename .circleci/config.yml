@@ -12,4 +12,9 @@ jobs:
       - run:
           name: Which bundler?
           command: bundle -v
+          
+      - run: 
+          name: Print the current time
+          command: date
+          
       - ruby/bundle-install

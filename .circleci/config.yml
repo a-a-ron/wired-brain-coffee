@@ -10,7 +10,7 @@ jobs:
           name: The First Step
           command:
             echo 'Hello World!'
-            echo 'This is the delivery pipeline
+            echo 'This is the delivery pipeline'
       - run:
           name: Print Current Time
           command: date

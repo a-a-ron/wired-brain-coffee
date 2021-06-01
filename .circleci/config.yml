@@ -8,13 +8,8 @@ jobs:
       - checkout
       
       - run:
-          name: build dependencies
-          command: bundle install
-
-      - run:
-          name: build the jekyll site
-          command: bundle exec jekyll build
-
+          name: Greeting  
+          command: echo Hello, World!
       - run:
           name: Print the Current Time
           command: date

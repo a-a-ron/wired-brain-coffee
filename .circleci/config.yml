@@ -7,11 +7,15 @@ jobs:
 
     steps:
       - checkout
+      
+      - run:
+          name: build dependencies
+          command: bundle install 
 
       # specify any bash command here prefixed with `run: `
       - run: 
-          name: Greeting
-          command: echo Hello , Sajjadul
+          name: build the jekyll site
+          command: bundle exec jekyll build
 
       - run:
           name: Print the Current Time

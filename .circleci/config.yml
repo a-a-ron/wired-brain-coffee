@@ -11,6 +11,8 @@ workflows:
     # Run the welcome/run job in its own container
     jobs:
       - welcome/run
+      
+    steps: 
       -run: 
         name: build dependencies
         command: bundle install 

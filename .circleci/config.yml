@@ -13,14 +13,14 @@ workflows:
       - welcome/run
       
     steps: 
-      -run: 
-        name: build dependencies
-        command: bundle install 
+      - run: 
+          name: build dependencies
+          command: bundle install 
         
-      -run: 
-        name: Build the jekyll site
-        command: bundle exec jekyll
+      - run: 
+          name: Build the jekyll site
+          command: bundle exec jekyll
         
-      -run:
-        name: Print the current time
-        command: date
+      - run:
+          name: Print the current time
+          command: date

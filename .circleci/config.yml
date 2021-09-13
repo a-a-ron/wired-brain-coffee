@@ -6,6 +6,7 @@ jobs:
     docker:
       - image: cimg/base:stable
     steps:
+      - checkout
       - ruby/install:
           version: '2.4'
       - ruby/install-deps:

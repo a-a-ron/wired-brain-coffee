@@ -8,7 +8,7 @@ jobs:
     steps:
       - checkout
       - ruby/install-deps:
-          with-cache: false
+          bundler-version: 2.0.2
 
 orbs:
   ruby: circleci/ruby@1.1.4

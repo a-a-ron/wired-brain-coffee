@@ -4,11 +4,9 @@ version: 2.1
 jobs:
   build:
     docker:
-      - image: cimg/base:stable
+      - image: cimg/ruby:2.6
     steps:
       - checkout
-      - ruby/install:
-          version: '2.5'
       - ruby/install-deps:
           with-cache: false
 

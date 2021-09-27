@@ -7,8 +7,12 @@ jobs:
       - image: cimg/ruby:2.6
     steps:
       - checkout
-      - ruby/install-deps:
-          bundler-version: 2.0.2
+      - run:
+          name: build dependencies
+          command: bundle install
+      - run:
+          name: build jekyll site
+          command: bundle exec jekyll build
 
 orbs:
   ruby: circleci/ruby@1.1.4

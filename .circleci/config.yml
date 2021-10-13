@@ -19,7 +19,7 @@ jobs:
           command: bundle install
       - run:
           name: build the jekyll site
-          command: bundle exec jekyll build
+          command: bundle exec jekyll build 
 
 # Invoke jobs via workflows
 # See: https://circleci.com/docs/2.0/configuration-reference/#workflows

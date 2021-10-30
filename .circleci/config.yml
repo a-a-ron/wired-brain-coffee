@@ -14,9 +14,13 @@ jobs:
     # See: https://circleci.com/docs/2.0/configuration-reference/#steps
     steps:
       - checkout
+       
+      - run:
+          name: "pre-install gem"
+          command: "sudo pip install gem"
 
       - run:
-          name: "pre-install"
+          name: "pre-install bundler"
           command: "gem install bundler"
       
       - run:

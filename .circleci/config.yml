@@ -1,39 +1,20 @@
-# Use the latest 2.1 version of CircleCI pipeline process engine.
-# See: https://circleci.com/docs/2.0/configuration-reference
-version: 2.1
-
-# Define a job to be invoked later in a workflow.
-# See: https://circleci.com/docs/2.0/configuration-reference/#jobs
+version: 2
 jobs:
-  validation:
-    # Specify the execution environment. You can specify an image from Dockerhub or use one of our Convenience Images from CircleCI's Developer Hub.
-    # See: https://circleci.com/docs/2.0/configuration-reference/#docker-machine-macos-windows-executor
+  build:
     docker:
-      - image: cimg/base:stable
-    # Add steps to the job
-    # See: https://circleci.com/docs/2.0/configuration-reference/#steps
+      - image: circleci/ruby:2.4.1-node-browsers
+    
     steps:
       - checkout
-       
+        
       - run:
-          name: "pre-install gem"
-          command: "sudo pip install gem"
-
-      - run:
-          name: "pre-install bundler"
-          command: "gem install bundler"
+          name: build dependencies
+          command: bundle install
       
       - run:
-          name: "build dependencies"
-          command: "bundle install"
-      
-      - run:
-          name: "build the jekyll site"
-          command: "bundle exec jekyll build"
+          name: build the jekyll site
+          command: bundle exec jekyll build
 
-# Invoke jobs via workflows
-# See: https://circleci.com/docs/2.0/configuration-reference/#workflows
-workflows:
-  validation-workflow:
-    jobs:
-      - validation
+      - run:
+          name: print the current time
+          command: date

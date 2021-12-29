@@ -14,14 +14,8 @@ jobs:
     docker:
       - image: circleci/ruby:2.6.3-stretch-node
     executor: ruby/default
-    steps:
     
-      - run:
-          name: build dependencies
-          command: bundle install
-      - run:
-          name: build jekyll site
-          command: bundle exec jekyll build
+    steps:
       - run:
           name: Print The Current Time
           command: date

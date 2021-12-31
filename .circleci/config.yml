@@ -13,11 +13,19 @@ jobs:
       - image: circleci/ruby:2.4.1-node-browsers
     # Add steps to the job
     # See: https://circleci.com/docs/2.0/configuration-reference/#steps
+    
     steps:
+      
       - checkout
+    
       - run:
-          name: Greeting
-          command: "echo Hello, World!"
+          name: build dependencies
+          command: bundle install
+    
+      - run:
+          name: build the jekyll site
+          command: bundle exec jekyll build
+      
       - run:
           name: Date
           command: date

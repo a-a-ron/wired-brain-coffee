@@ -1,12 +1,14 @@
-title: Wired Brain Coffee
+title: qatools
+
 logo: "/images/company-logo.png?raw=true"
+
 description: >
-  first description
+  Test Automation Tips
   <br><br>
-  60 State Street
-  Suite 800
-  Boston, MA 02109
+  60 Octavian Goga
+  Suite 8
+  Timisoara, 300199
   <br><br>
-  <a href="https://www.pluralsight.com">www.wiredbraincoffee.com</a>
+  <a href="https://www.qatools.ro">qatools.to</a>
 
 theme: jekyll-theme-minimal

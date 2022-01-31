@@ -16,10 +16,10 @@ jobs:
       - checkout
       
       -run:
-        name: build dependencies
+        name: "build dependencies"
         commadn: bundle install
       - run:
-          name: build the jekyll site
+          name: "build the jekyll site"
           command: bundle exec jekyll build
       - run:
           name: "Print the current Time"

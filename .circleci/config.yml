@@ -1,14 +1,16 @@
-version: 2.1
-orbs:
-  node: circleci/ruby:2.4.1-node-browsers
+version: 2
 jobs:
   build:
-    executor:
-      name: node/default
-      tag: '10.4'
+    docker:
+    - image: circleci/ruby:2.4.1-node-browsers
+    
     steps:
       - checkout
-      - node/with-cache:
-          steps:
-            - run: npm install
-      - run: npm run test
+      
+      - run: 
+          name: greeting
+          command: echo Hello, World.
+        
+      - run:
+          name: print the date time
+          command: date

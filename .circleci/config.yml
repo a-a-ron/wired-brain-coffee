@@ -1,0 +1,14 @@
+version: 2.1
+orbs:
+  node: circleci/ruby:2.4.1-node-browsers
+jobs:
+  build:
+    executor:
+      name: node/default
+      tag: '10.4'
+    steps:
+      - checkout
+      - node/with-cache:
+          steps:
+            - run: npm install
+      - run: npm run test

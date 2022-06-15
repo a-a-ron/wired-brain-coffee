@@ -17,7 +17,11 @@ jobs:
       
       - run: 
           name: bundle dependencies
-          command: bundle install 
+          command: bundle install
+          
+      - run: Hello
+        command: "echo hello all"
+        
       - run:
           name: "buiuld jekyll site"
           command: bundle exec jekyll build

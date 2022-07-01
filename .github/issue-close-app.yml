@@ -7,7 +7,6 @@ issueConfigs:
   - "Expected Behavior"
   - "Current Behavior"
   - "Steps to Reproduce"
-  - "Detailed Description"
 - content:
 # Example 2: feature request
   - "Motivation / Use Case"

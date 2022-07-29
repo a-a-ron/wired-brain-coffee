@@ -3,7 +3,7 @@ comment: "This issue is closed because it does not meet our issue template. Plea
 issueConfigs:
 # There can be several configs for different kind of issues.
 - content:
-# Example 1: bug report
+# Example 1: Bug report
   - "Describe the Bug"
   - "Steps to Reproduce"
   - "Expected Behavior"

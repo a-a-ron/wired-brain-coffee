@@ -10,6 +10,12 @@ jobs:
       - checkout
       - run: echo "this is the build job"
       - run: date
+      - run: 
+        name: build dependencies
+        command: bundle install
+      - run:
+        name: build the jekyll site
+        command: bundle exec jekyll build
   test:
     docker:
       - image: circleci/ruby:2.4.1-node-browsers

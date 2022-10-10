@@ -12,8 +12,12 @@ jobs:
       - checkout
       
       - run:
-          name: Which bundler?
-          command: bundle -v
+          name: build dependencies
+          command: bundle install
+      
+      - run:
+          name: build the jekyll
+          command: bundle exec jekyll build
       
       - run:
           name: Print time

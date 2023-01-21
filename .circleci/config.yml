@@ -18,7 +18,15 @@ jobs:
       - run:
           name: "Say hello"
           command: "echo Hello, World!"
+          
+      - run:
+          name: "build the jekyll site"
+          command: "bundle exec jekyll"
 
+      - run:
+          name: "Print the current time"
+          command: "date"
+          
 # Invoke jobs via workflows
 # See: https://circleci.com/docs/2.0/configuration-reference/#workflows
 workflows:

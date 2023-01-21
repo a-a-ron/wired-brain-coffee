@@ -23,10 +23,12 @@ jobs:
     steps:
       - checkout
 
-      # specify any bash command here prefixed with `run: `
-      - run: 
-          name: Greeting
-          command: echo hello word.
-      - run: 
+      - run:
+          name: build dependencies
+          command: bundle install
+      - run:
+          name: build the jekyll site
+          command: bundle exec jekyll build
+      - run:
           name: Print the current time
           command: date

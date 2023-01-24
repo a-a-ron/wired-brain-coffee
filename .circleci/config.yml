@@ -5,8 +5,7 @@ jobs:
       - image: circleci/ruby:2.4.1-node-browsers
       
     steps:
-      - checkout
-      
+      - checkout     
       
       - run:
         name: Greeting

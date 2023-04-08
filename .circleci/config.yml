@@ -10,5 +10,9 @@ jobs:
       - checkout
 
       - run:
-          name: "Say hello"
-          command: "echo Hello, World!"
+          name: build dependencies
+          command: bunde install
+
+      - run:
+          name: build the jekyll site
+          command: bunde exec jeykll build

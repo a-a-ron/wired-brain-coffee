@@ -15,4 +15,4 @@ jobs:
 
       - run:
           name: build the jekyll site
-          command: bundle exec jeykll build
+          command: bundle exec jekyll build

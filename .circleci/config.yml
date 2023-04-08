@@ -11,8 +11,8 @@ jobs:
 
       - run:
           name: build dependencies
-          command: bunde install
+          command: bundle install
 
       - run:
           name: build the jekyll site
-          command: bunde exec jeykll build
+          command: bundle exec jeykll build

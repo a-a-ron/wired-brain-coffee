@@ -13,7 +13,7 @@ jobs:
 
       - run:
           name: Build the jekll site
-          command: bundle exec jekli build
+          command: bundle exec jekll build
           
       - run:
           name: Print the current time

@@ -1,0 +1,20 @@
+version: 2
+jobs:
+  build:
+    docker:
+      - image: circleci/ruby:2.4.1-node-browsers
+
+    steps:
+      - checkout
+
+      - run:
+          name: build dependencies
+          command: bundle install 
+
+      - run:
+          name: Build the jekll site
+          command: bundle exec jekll build
+          
+      - run:
+          name: Print the current time
+          command: date

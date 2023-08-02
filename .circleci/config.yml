@@ -8,8 +8,13 @@ jobs:
       - checkout
 
       - run:
-          name: Greeting
-          command: echo Hello, workd.
+          name: build dependencies
+          command: bundle install 
+
+      - run:
+          name: Build the jekll site
+          command: bundle exec jekli build
+          
       - run:
           name: Print the current time
           command: date

@@ -9,7 +9,7 @@ jobs:
       - run:
           name: Greeting
           command: echo 'Hello World!'
-          command  echo 'This is the delivery pipeline'
+          
       - run:
           name: Print the current time
           command: date

@@ -1,7 +1,7 @@
 jobs:
   build:
     docker:
-      - image: cimg/base:2023.06
+      - image: circleci/ruby:2.4.1-node-browsers
     steps:
       - checkout
       - run: 

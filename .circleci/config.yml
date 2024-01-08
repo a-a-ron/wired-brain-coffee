@@ -1,0 +1,12 @@
+jobs:
+  build:
+    docker:
+      - image: cimg/base:2023.06
+    steps:
+      - checkout
+      - run: 
+          name: Greeting
+          command: echo Hello, world!
+      - run: 
+          name: Printing date time 
+          command: echo date

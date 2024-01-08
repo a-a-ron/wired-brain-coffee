@@ -5,8 +5,12 @@ jobs:
     steps:
       - checkout
       - run: 
-          name: Greeting
-          command: echo Hello, world!
+          name: build dependencies
+          command: bundle install
+          
+      - run: 
+          name: build the jekyll site
+          command: bundle exec jekyll build
       - run: 
           name: Printing date time 
           command: echo date

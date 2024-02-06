@@ -2,7 +2,7 @@ version: 2
 jobs:
   build:
     docker:
-      - image: cimg/ruby:2.4.1
+      - image: cimg/ruby:3.2-node
 
     steps:
       - checkout

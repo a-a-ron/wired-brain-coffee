@@ -7,6 +7,8 @@ jobs:
     steps:
       - checkout
 
-      - run: echo Hello World!
+      - run: bundle install
+
+      - run: bundle exec jekyll build
 
       - run: date

@@ -7,10 +7,6 @@ jobs:
     steps:
       - checkout
 
-      - run:
-        name: Greeting
-        command: echo Hello World!
+      - run: echo Hello World!
 
-      - run:
-        name: Print current date
-        command: date
+      - run: date

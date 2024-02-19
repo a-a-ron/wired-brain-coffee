@@ -1,0 +1,13 @@
+version: 2
+jobs:
+  build:
+    docker:
+      - image: circleci/ruby:2.4.1-node-browsers
+    steps:
+      - checkout
+      - run:
+          name: build dependencies
+          command: bundle install
+      - run:
+          name: build jekyl site
+          command: bundle exec jekyll build
